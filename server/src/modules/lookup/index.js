@@ -12,7 +12,7 @@ const processRequest = async (req, res, next) => {
 
 const init = async (app) => {
   app.use(
-    "/api/products",
+    "/api/lookup",
     authenticateRequest,
     authorizeRequest,
     processRequest,
