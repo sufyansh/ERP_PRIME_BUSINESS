@@ -24,11 +24,11 @@ const countHandler = async (req, res, next) => {
   return baseCountHandler(req, res, next);
 };
 
-router.get("/detail", getByIdHandler);
+router.get("/getLookupById", getByIdHandler);
 router.post("/create", handleValidation(validate), saveHandler);
-router.put("/update", handleValidation(validate), updateHandler);
+// router.put("/update", handleValidation(validate), updateHandler);
 router.post("/search", searchHandler);
 router.post("/count", countHandler);
-router.delete("/delete", deleteHandler);
+// router.delete("/delete", deleteHandler);
 
 module.exports = router;

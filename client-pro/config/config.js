@@ -82,6 +82,41 @@ export default defineConfig({
         },
       ],
     },
+     {
+      path: '/VendorMaster',
+      icon: 'table',
+
+      name: 'VendorMaster',
+
+      routes: [
+         {
+          path: '/VendorMaster',
+          redirect: '/VendorMaster/list',
+        },
+
+        {
+          name: 'List',
+          icon: 'smile',
+          path: '/VendorMaster/list',
+          component: './VendorMaster/vendor-list',
+        },
+
+        {
+          name: 'New',
+          icon: 'smile',
+          path: '/VendorMaster/new',
+          component: './VendorMaster/vendor-entry',
+        },
+        {
+
+          name: 'Update',
+          hideInMenu: true,
+          icon: 'smile',
+          path: '/VendorMaster/edit/:id',
+          component: './VendorMaster/vendor-update',
+        },
+      ],
+    },
     {
       path: '/dashboard',
       name: 'dashboard',
